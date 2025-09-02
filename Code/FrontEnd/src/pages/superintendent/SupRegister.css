@@ -1,0 +1,119 @@
+/* src/pages/invigilator/InvigilatorLogin.css */
+.invigilator-login-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6ffed 0%, #bed7f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invigilator-login-content {
+  width: 100%;
+  padding: 20px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-title {
+  color: #52c41a;
+  margin-bottom: 0 !important;
+}
+
+.invigilator-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #52c41a 0%, #389e0d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(82, 196, 26, 0.2);
+  margin: 0 auto;
+}
+
+.logo-icon {
+  font-size: 28px;
+  color: white;
+}
+
+.login-button {
+  height: 45px;
+  border-radius: 6px;
+  font-weight: 500;
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+.login-button:hover {
+  background-color: #389e0d;
+  border-color: #389e0d;
+}
+
+.back-button {
+  color: #8c8c8c;
+}
+
+.back-button:hover {
+  color: #52c41a;
+}
+
+.register-link {
+  text-align: center;
+  display: block;
+  color: #52c41a;
+}
+
+.register-link:hover {
+  color: #389e0d;
+}
+
+.additional-options {
+  text-align: center;
+}
+
+/* Form styling */
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 6px;
+  padding: 8px 11px;
+}
+
+.ant-input-prefix {
+  margin-right: 8px;
+  color: #bfbfbf;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .invigilator-login-content {
+    padding: 10px;
+  }
+  
+  .login-card {
+    box-shadow: none;
+  }
+  
+  .login-title {
+    font-size: 20px !important;
+  }
+}

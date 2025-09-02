@@ -1,0 +1,134 @@
+/* src/pages/RoleSelection.css */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.role-selection-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.role-selection-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #073a6b 0%, #096dd9 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0 24px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.circular-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-icon {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+.role-selection-content {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.welcome-section h1 {
+  color: #262626;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+}
+
+.role-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 33px 0;
+  background: #fafafa;
+}
+
+.card-meta {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.card-meta .ant-card-meta-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.role-button {
+  margin-top: auto;
+  border-radius: 6px;
+  height: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .role-selection-content {
+    padding: 24px 16px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 24px;
+  }
+  
+  .header-content {
+    justify-content: center;
+  }
+  
+  .header-content h2 {
+    font-size: 18px;
+  }
+  
+  .circular-logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-icon {
+    font-size: 18px;
+  }
+}
