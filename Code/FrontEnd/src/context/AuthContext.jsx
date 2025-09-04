@@ -91,7 +91,7 @@ const login = async (email, password, intendedRole) => {
   // ✅ Admin: Get pending users
   const getPendingUsers = async () => {
     try {
-      const { data } = await authAxios.get("/admin/pending");
+      const { data } = await authAxios.get("http://localhost:5000/api/admin/pending");
       return data;
     } catch (err) {
       throw new Error(err.response?.data?.error || "Failed to fetch pending users");
@@ -107,7 +107,39 @@ const login = async (email, password, intendedRole) => {
       throw new Error(err.response?.data?.error || "Failed to approve user");
     }
   };
+  // Get profile
+  const getProfile = async () => {
+    const res = await axios.get("http://localhost:5000/api/profile/me", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    setUser(res.data);
+    return res.data;
+  };
 
+  // Update profile
+  const updateProfile = async (profileData) => {
+    const res = await axios.put("http://localhost:5000/api/profile/me", profileData, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    setUser(res.data);
+    return res.data;
+  };
+
+  // Admin: assign duty
+  const assignDuty = async (dutyData) => {
+    const res = await axios.post("http://localhost:5000/api/duties", dutyData, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    return res.data;
+  };
+
+  // Superintendent/Invigilator: view my duties
+  const getMyDuties = async () => {
+    const res = await axios.get("http://localhost:5000/api/duties/me", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    return res.data;
+  };
   // ✅ Logout
   const logout = () => {
     setToken("");
@@ -128,7 +160,11 @@ const login = async (email, password, intendedRole) => {
         approveUser,
         fetchUserProfile,
         isUserApproved,
-        authAxios // Export authAxios for other components to use
+        authAxios,
+        getProfile,
+        updateProfile,
+        assignDuty,
+        getMyDuties,
       }}
     >
       {children}

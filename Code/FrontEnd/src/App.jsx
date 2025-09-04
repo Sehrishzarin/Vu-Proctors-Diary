@@ -13,7 +13,8 @@ import SuperintendentLogin from "./pages/superintendent/Login";
 import AdminLogin from "./pages/admin/Login";
 import InvigilatorReg from "./pages/invigilator/Register.jsx";
 import SuperintendentReg from "./pages/superintendent/Register.jsx";
-
+import AssignDuties from "./pages/admin/AssignDuties.jsx";
+import ManageUsers from "./pages/admin/ManageUsers.jsx";
 function App() {
   const { user } = useAuth();
 
@@ -59,6 +60,8 @@ function App() {
         }
       >
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/assign" element={<AssignDuties />} />
+        <Route path="/admin/users" element={<ManageUsers />} />
       </Route>
 
       <Route
